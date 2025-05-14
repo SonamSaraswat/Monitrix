@@ -1,0 +1,37 @@
+.consultation{
+    background-image: url('/cons.jpg');
+    width: 100vw;
+    height: 350px;
+    margin-top: 100px;
+    background-size: cover;
+    display: block;
+    position: relative;
+     
+
+}
+.cons-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 30%;
+    right: 10%;
+    gap: 20px;
+
+}
+.cons-para-heading{
+    font-size: 30px;
+    font-weight: 600;
+}
+.cons-para{
+    font-size: 20px;
+    font-weight: 500;
+}
+.cons-span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.cons-para-last{
+    font-size: 20px;
+    font-weight: 500;
+}

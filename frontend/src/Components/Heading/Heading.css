@@ -1,0 +1,30 @@
+.heading{
+    display: flex;
+    height: 50px;
+    background-color: rgb(248, 248, 234);
+    align-items: center;
+    justify-content: space-between;
+}
+.para-left{
+    margin-left: 15px;
+    padding-left: 20px;
+    font-size: 18px;             
+    font-weight: 500;
+    
+}
+.right{
+    background-color:#0775bb;
+    height: 50px;
+    margin-right: 50px;
+    padding: 0 45px;
+    text-align: center;
+    border: 1px solid #1f6e78;
+    color: white;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+  font-size: 18px;             
+  font-weight: 500; 
+}

@@ -1,0 +1,31 @@
+.container{
+     width: 100vw;
+     height: 34vw;
+     background: url('/bg.jpg') no-repeat;
+     background-size: cover;
+     display: block;
+     position: relative;
+}
+.header-contents{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left:6vw;
+    animation: fadeIn 3s;
+}
+.container h2{
+    font-size: 55px;
+    font-weight: 900;
+}
+.container-para{
+    font-size: 25px;
+    font-weight: 900;
+}
+.container-span{
+    font-size: 20px;
+    font-weight: 500;
+}

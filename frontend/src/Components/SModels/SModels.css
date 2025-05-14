@@ -1,0 +1,62 @@
+.s-models{
+    margin: 90px 20px;
+}
+.models-heading h1{
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    
+}
+.models-heading p{
+    font-size: 20px;
+    
+}
+.models-container{
+    margin: 60px 60px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+}
+.models-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+
+}
+.models-container img{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+
+}
+.models-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.models-title{
+    width: 120px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.models-price{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(24, 122, 203);
+}
+.models-item button{
+    width: 120px;
+    height: 40px;
+    padding: 10px 10px;
+    background-color: rgb(225, 236, 238);
+    font-size: 16px;
+    border: 2px solid rgb(207, 207, 226);
+}
+.models-item button:hover{
+    cursor: pointer;
+}

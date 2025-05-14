@@ -1,0 +1,70 @@
+.about-sir{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.about-header p{
+    font-size: 25px;
+    color: rgb(13, 136, 223);
+    margin-bottom: 10px;
+    text-align: center;
+   
+}
+.about-header img{
+    border-radius: 20%;
+}
+
+.about-content h1{
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+   
+}
+.about-content p{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.about-service{
+    margin-top: 60px;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.about-service p{
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.about-p{
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(13, 136, 223);
+}
+.team h1{
+    text-align: center;
+    margin: 50px;
+    font-size: 45px;
+    font-weight: 800;
+}
+.members{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+.item{
+    height: 250px;
+    width: 250px;
+    border: 2px solid rgb(247, 246, 246);
+    text-align: center;
+    padding: 20px;
+}
+.item h2{
+    margin: 10px;
+}

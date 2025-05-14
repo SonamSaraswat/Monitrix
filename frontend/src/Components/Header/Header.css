@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 80px;
+}
+.logo:hover{
+    cursor: pointer;
+}
+.header-items{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.header-items li{
+    cursor: pointer;
+}
+.sign-in{
+   margin-right: 25px;
+   height: 40px;
+   padding: 5px 20px;
+   border-radius: 20px;
+   color: white;
+   background-color: #6ec1e4;
+   font-size: 18px;
+   font-weight: 500;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
+}

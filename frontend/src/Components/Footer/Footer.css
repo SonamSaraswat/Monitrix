@@ -1,0 +1,62 @@
+.footer{
+    background-color: rgb(75, 152, 219);
+    color: black;
+}
+.footer-contents{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+.about{
+    margin: 20px 10px;
+    width: 500px;
+}
+.about h1{
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.about p{
+  font-weight: 500;
+}
+.about button{
+    margin-top: 20px;
+    width: 130px;
+    height: 40px;
+    padding: 5px;
+    font-size: 18px;
+
+}
+.useful-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    justify-content: center;
+}
+.useful-links h1{
+    font-weight: 800;
+}
+.useful-links h3 a{
+    font-size: 30px;
+    font-weight: 800;
+}
+.connect{
+    margin: 20px 10px;
+    width: 500px;
+    text-align: center;
+
+}
+.connect h1{
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.connect p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.footer p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
