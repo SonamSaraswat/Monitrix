@@ -23,6 +23,7 @@ import Register from './Pages/Register/Register'
 import Login from './Pages/Login/Login'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import Admin from './Pages/Admin/Admin'
+import ContentViewer from './Pages/ContentViewer/ContentViewer'
 
 function App() {
   
@@ -49,6 +50,10 @@ function App() {
       <Route path ='/Login' element={<Login/>}/>
       <Route path='/Dashboard' element={<Dashboard/>}/>
       <Route path="/Admin" element={<Admin/>} />
+       <Route path="/:level/:slug" element={<ContentViewer/>} />
+        <Route path="/admin/:level/:slug" element={
+          ({ params }) => <AdminContentEditor level={params.level} slug={params.slug} />
+        } />
     </Routes>
     <Footer/>
    
