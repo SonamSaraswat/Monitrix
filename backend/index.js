@@ -4,6 +4,7 @@ import categoriesRoutes from "./Routes/categories.js"
 import contentRoutes from "./Routes/contentRoutes.js"
 import cors from "cors"
 import cookieParser from "cookie-parser";
+import contentdata from "./Routes/content.js"
 
 
 const app=express();
@@ -15,6 +16,8 @@ app.use(cors());
 app.use("/api/auth", authrouter)
 app.use('/api/categories', categoriesRoutes);
 app.use('/api', contentRoutes);
+app.use('/api/content', contentdata);
+
 
 app.listen(5000,()=>{
     console.log("Connected")

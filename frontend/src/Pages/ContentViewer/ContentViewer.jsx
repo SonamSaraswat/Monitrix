@@ -6,11 +6,12 @@ const ContentViewer = () => {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/content/${level}/${slug}`)
-      .then(res => res.json())
-      .then(data => setContent(data.content || ''));
-  }, [level, slug]);
-
+   console.log("level:", level, "slug:", slug);
+  fetch(`http://localhost:5000/api/content/${level}/${slug}`)
+    .then(res => res.json())
+    .then(data => setContent(data.content || ''))
+    .catch(err => console.error("Error fetching content:", err));
+}, [level, slug]);
   return (
     <div className="p-4">
       <div dangerouslySetInnerHTML={{ __html: content }} />

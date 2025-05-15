@@ -9,7 +9,10 @@ const Servicess = () => {
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/categories/all')
-      .then(res => setCategories(res.data))
+       .then(res => {
+    console.log("Fetched categories:", res.data); // 🧠 check this
+    setCategories(res.data);
+  })
       .catch(err => console.error("Error fetching categories", err));
   }, []);
 
@@ -27,19 +30,19 @@ const Servicess = () => {
           {
             categories.map(category => (
               <li className="s-items dropdown" key={category.id}>
-                <Link to={`/main/${category.slug}`}>{category.name}</Link>
+                <Link to={`/content/main/${category.slug}`}>{category.name}</Link>
 
                 {category.subcategories?.length > 0 && (
                   <ul className="dropdown-menu">
                     {category.subcategories.map(sub => (
                       <li key={sub.id} className="dropdown-item">
-                        <Link to={`/sub/${sub.slug}`}>{sub.name}</Link>
+                        <Link to={`/content/sub/${sub.slug}`} onClick={() => console.log("SUB SLUG:", sub.slug)}>{sub.name}</Link>
 
                         {sub.subsubcategories?.length > 0 && (
                           <ul className="dropdown-submenu">
                             {sub.subsubcategories.map(subsub => (
                               <li key={subsub.id} className="dropdown-subitem">
-                                <Link to={`/subsub/${subsub.slug}`}>{subsub.name}</Link>
+                                <Link to={`/content/subsub/${subsub.slug}`} onClick={() => console.log("SUB SUB SLUG:", subsub.slug)}>{subsub.name}</Link>
                               </li>
                             ))}
                           </ul>

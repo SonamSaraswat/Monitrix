@@ -7,6 +7,7 @@ const Register = () => {
     username: '',
     email: '',
     password: '',
+    role: ''||"user",
     referralCode: generateReferralCode(),
     referredBy: '',
   });
@@ -40,14 +41,14 @@ const Register = () => {
         <input required type="text" placeholder="username" name="username" onChange={handleChange}/>
          <input required type="email" placeholder='email'  name="email" onChange={handleChange}/>
         <input required type="password" placeholder="password"  name="password" onChange={handleChange}/>
-       {/* <select
+        <select
         name="role"
         value={formData.role}
         onChange={handleChange}
       >
         <option value="user">User</option>
         <option value="admin">Admin</option>
-      </select>*/}
+      </select>
         <input type="text" placeholder="ReferredBy Id" name="referred_by" onChange={handleChange}/>
         <button onClick={(e) => handleSubmit(e)}>Register</button>
               <input  type="text" value={formData.referralCode} disabled/>
