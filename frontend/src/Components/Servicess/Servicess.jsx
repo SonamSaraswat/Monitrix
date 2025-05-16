@@ -9,10 +9,10 @@ const Servicess = () => {
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/categories/all')
-       .then(res => {
-    console.log("Fetched categories:", res.data); // 🧠 check this
-    setCategories(res.data);
-  })
+      .then(res => {
+        console.log("Fetched categories:", res.data);
+        setCategories(res.data);
+      })
       .catch(err => console.error("Error fetching categories", err));
   }, []);
 
@@ -26,6 +26,7 @@ const Servicess = () => {
       </p>
 
       <div className="service-container">
+        <img className="service-image" src={assets.services} alt="services" />
         <ul className="service-items">
           {
             categories.map(category => (
@@ -55,15 +56,9 @@ const Servicess = () => {
             ))
           }
 
-          {/* Static services (you can link these too if needed) */}
-          <li className="s-items">REGISTRATION</li>
-          <li className="s-items">IMPORT/ EXPORT</li>
-          <li className="s-items">RCMC</li>
-          <li className="s-items">TAX</li>
-          <li className="s-items">IPR</li>
         </ul>
 
-        {/* <img className="service-image" src={assets.services} alt="services" /> */}
+        {/*  */}
       </div>
 
       <hr />
