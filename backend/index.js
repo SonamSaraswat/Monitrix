@@ -5,6 +5,13 @@ import contentRoutes from "./Routes/contentRoutes.js"
 import cors from "cors"
 import cookieParser from "cookie-parser";
 import contentdata from "./Routes/content.js"
+import multer from "multer"
+import path from "path"
+import { fileURLToPath } from 'url';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 const app=express();
@@ -12,6 +19,40 @@ const app=express();
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors());
+
+
+
+// Serve static files from the 'uploads' directory
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Multer storage setup
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Save to uploads folder
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage });
+
+// Image upload route
+app.post('/api/upload', upload.single('image'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ error: 'No file uploaded' });
+  }
+
+  const imageUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+  res.json({ url: imageUrl });
+});
+
+
+
+
+
+
 
 app.use("/api/auth", authrouter)
 app.use('/api/categories', categoriesRoutes);
